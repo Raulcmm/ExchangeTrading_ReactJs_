@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from '@emotion/styled';
+import Cotizador from './components/Cotizador';
+const imagen = require('./assets/img/cryptomonedas.png');
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const Container = styled.div`
+	margin: 0 auto;
+	width: 80%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+`;
+
+const App = () => {
+	return (<Container>
+    <figure>
+      <img src={imagen} alt=""/>
+    </figure>
+    <Cotizador/>
+  </Container>);
+};
 
 export default App;
